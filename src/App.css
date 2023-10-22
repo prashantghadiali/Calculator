@@ -1,0 +1,104 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.box{
+  height: 500px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.display{
+  background-color: rgba(75, 74, 71, 0.648);
+  border-radius: 5px;
+  height: 100px;
+}
+.displayTextInput{
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  justify-content: space-between; /* Push the text to the bottom */
+  align-items: flex-start; /* Align items to the left */
+  color: white;
+  margin-left: 5px;
+}
+
+.displayTextResult{
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  justify-content: space-between; /* Push the text to the bottom */
+  align-items: flex-end; /* Align items to the right */
+  color: white;
+  margin-right: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows of equal height */
+    width: 300px; 
+    height: 400px; 
+  }
+
+  /* Style for each grid item */
+  .grid-item {
+    border: 1px solid #ddd; /* Optional: Add a border for each item */
+    padding: 10px; /* Optional: Add padding for spacing */
+    text-align: center; /* Optional: Center text */
+  }
+
+  /* Double width for the 17th box */
+  .grid-item:nth-child(17) {
+    grid-column: span 2; /* Span 2 columns */
+  }
+
+  /* Reset width for the 18th and 19th boxes */
+  .grid-item:nth-child(18),
+  .grid-item:nth-child(19) {
+    grid-column: span 1; /* Span 1 column (default width) */
+  }
+
+  .specialBtn{
+    color: white;
+    background-color: #F79231;
+  }
+
+  /* Hover effect */
+  .grid-item:hover {
+    background-color: #989898; /* Change the background color on hover */
+  }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
